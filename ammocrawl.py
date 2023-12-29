@@ -8,7 +8,7 @@ def crawl(url):
          print('Success connecting to URL')
     elif response.status_code == 404:
          print('Not Found.')
-    # print(response.content)
+    print(response.content)
     # Check if the request was successful
     if response.status_code == 200:
         # Parse the HTML content of the page
@@ -28,8 +28,8 @@ def crawl(url):
         return None
 
 # Define the URL of the website to be crawled
-#url = 'https://www.firearmsdepot.com/ammunition'
-url = 'https://www.luckygunner.com/handgun/9mm-ammo'
+url = 'https://www.firearmsdepot.com/ammunition'
+#url = 'https://www.luckygunner.com/handgun/9mm-ammo'
 # Crawl the website
 min_price = crawl(url)
 # Print the minimum price
